@@ -1,0 +1,38 @@
+header {
+	background-color: none;
+	position: absolute;
+	padding: 20px;
+}
+header h1 {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+/* HERO */
+
+.hero {
+	height: 80vh;
+	padding: 200px 0px;
+	background-image:radial-gradient(circle at 61.25% 80.18%, #00d2ff, transparent 100%),radial-gradient(circle at 28.91% 22.41%, #4490fa, transparent 100%),radial-gradient(circle at 50% 50%, #b8b8b8, #b8b8b8 100%);
+}
+.hero h3 {
+	font-family: 'Montserrat', sans-serif;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+	color: white;
+}
+.hero p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	color: white;
+}
+.button {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: 600;
+	border-radius: 32px;
+}
+.button.warning {
+	background-color: #ffdd55;
+}
