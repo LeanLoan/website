@@ -17,8 +17,8 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-96105485-1', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-96105485-1', 'auto');
+        ga('send', 'pageview');
       </script>
 
     <header>
@@ -30,9 +30,9 @@
         <div class="small-5 columns">
           <h3>The simplest loan contract, the best relationships</h3>
           <p><b>LeanLoan</b> offers you to customize the simplest contract template for the loan between you and your friends and family.</p>
-          <a href="#" class="hollow button round " onclick="ga('send', 'event', 'Hero-LearnMore', 'click', 'Landing Page Beta');">Learn more</a>
+          <a href="#" id="hero-btn-learn-more" class="hollow button round">Learn more</a>
           <span>&nbsp;</span>
-          <a href="assets/Leningsovereenkomst.pdf" class=" button warning" onclick="ga('send', 'event', 'Contract', 'download', 'Landing Page Beta');">Get my contract</a>          
+          <a href="assets/Leningsovereenkomst.pdf" id="hero-btn-download-contract" class="button warning">Get my contract</a>          
         </div>
         <div class="small-1 columns"></div>
       </div>
@@ -42,12 +42,9 @@
     </section>
     </body>
 
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/what-input.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
