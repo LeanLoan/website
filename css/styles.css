@@ -43,6 +43,12 @@ header h1 {
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
+	.hero {
+		height: 80vh;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
 	.hero h3 {
 		/*text-transform: uppercase;*/
 		font-size: 1.5em;
@@ -51,6 +57,17 @@ header h1 {
 	.hero p{
 		font-weight: 300;
 		margin-bottom: 1em;
+	}
+	.feature {
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+	.feature .feature-image {
+		padding: 2em;
+	}
+	.feature p {
+		padding-right: 1em;
+		padding-left: 1em;
 	}
 }
 
