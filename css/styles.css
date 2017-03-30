@@ -10,10 +10,10 @@ header h1 {
 	font-size: 1em;
 }
 
-/* HERO */
+/* HERO /////////////////////////////////////////////////////////////////////*/
 
 .hero {
-	height: 100vh;
+	height: 80vh;
 	padding: 200px 0px;
 	background-image:radial-gradient(circle at 61.25% 80.18%, #00d2ff, transparent 100%),radial-gradient(circle at 28.91% 22.41%, #4490fa, transparent 100%),radial-gradient(circle at 50% 50%, #b8b8b8, #b8b8b8 100%);
 }
@@ -41,9 +41,20 @@ header h1 {
 	background-color: #ffdd55;
 }
 
+/* FEATURES /////////////////////////////////////////////////////////////////*/
+
+.feature {
+	margin-top: 6em;
+	margin-bottom: 6em;
+}
+
 .feature p {
 	font-family: 'Open Sans', sans-serif;
+	padding-right: 2em;
 }
+
+/* REPSOINSIVE /////////////////////////////////////////////////////////////*/
+
 /* Small only */
 @media screen and (max-width: 39.9375em) {
 	.hero {
