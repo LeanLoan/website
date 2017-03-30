@@ -1,7 +1,7 @@
 header {
 	background-color: none;
 	position: absolute;
-	padding: 20px;
+	padding-top: 1.5em;
 }
 header h1 {
 	font-family: 'Open Sans', sans-serif;
@@ -13,7 +13,7 @@ header h1 {
 /* HERO */
 
 .hero {
-	height: 80vh;
+	height: 100vh;
 	padding: 200px 0px;
 	background-image:radial-gradient(circle at 61.25% 80.18%, #00d2ff, transparent 100%),radial-gradient(circle at 28.91% 22.41%, #4490fa, transparent 100%),radial-gradient(circle at 50% 50%, #b8b8b8, #b8b8b8 100%);
 }
@@ -27,6 +27,10 @@ header h1 {
 	font-size: 1.2em;
 	color: white;
 }
+.hero .button.primary {
+	border-color: white;
+	color: white;
+}
 .button {
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
@@ -35,4 +39,37 @@ header h1 {
 }
 .button.warning {
 	background-color: #ffdd55;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+	.hero h3 {
+		/*text-transform: uppercase;*/
+		font-size: 1.5em;
+		margin-bottom: 0.4em;
+	}
+	.hero p{
+		font-weight: 300;
+		margin-bottom: 1em;
+	}
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+
 }
