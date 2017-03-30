@@ -13,7 +13,7 @@ header h1 {
 /* HERO /////////////////////////////////////////////////////////////////////*/
 
 .hero {
-	height: 80vh;
+	height: 100vh;
 	padding: 200px 0px;
 	background-image:radial-gradient(circle at 61.25% 80.18%, #00d2ff, transparent 100%),radial-gradient(circle at 28.91% 22.41%, #4490fa, transparent 100%),radial-gradient(circle at 50% 50%, #b8b8b8, #b8b8b8 100%);
 }
@@ -58,7 +58,7 @@ header h1 {
 /* Small only */
 @media screen and (max-width: 39.9375em) {
 	.hero {
-		height: 80vh;
+		height: 100vh;
 		padding-left: 1em;
 		padding-right: 1em;
 	}
@@ -121,7 +121,7 @@ header h1 {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
 	.hero {
-		height: 80vh;
+		height: 100vh;
 		padding-left: 1em;
 		padding-right: 1em;
 	}
@@ -198,7 +198,7 @@ iPad 3
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
 	.hero {
-		height: 80vh;
+		height: 100vh;
 		padding: 7em 0px;
 		padding-left: 1em;
 		padding-right: 1em;
@@ -224,7 +224,7 @@ iPad 3
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
 	.hero {
-		height: 80vh;
+		height: 100vh;
 		padding: 7em 0px;
 		padding-left: 1em;
 		padding-right: 1em;
@@ -267,7 +267,7 @@ iPad 3
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
 	.hero {
-		height: 80vh;
+		height: 100vh;
 		padding: 7em 0px;
 		padding-left: 1em;
 		padding-right: 1em;
