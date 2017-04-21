@@ -45,6 +45,17 @@ header h1 {
 	background-color: #ffdd55;
 }
 
+/* MODAL ////////////////////////////////////////////////////////////////////*/
+
+.reveal h1 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.reveal p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
 /* FEATURES /////////////////////////////////////////////////////////////////*/
 
 .feature {

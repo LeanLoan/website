@@ -7,6 +7,8 @@
     <title>LeanLoan, the simplest contract for loans between family and friends</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   </head>
@@ -29,14 +31,27 @@
     <section class="hero">
       <div class="row">     
         <div class="small-12 medium-6 columns">
-          <img class="float-center" src="img/loan-agreement.svg">
-        </div> 
+
+        <img class="float-center" src="img/loan-agreement.svg">
+<!--  
+          <div class="hero-slideshow">
+            <div>
+              <img class="float-center" src="img/loan-agreement.svg">
+            </div>
+            <div>
+              <img class="float-center" src="img/loan-agreement-2.svg">
+            </div>
+            <div>
+              <img class="float-center" src="img/loan-agreement-3.svg">
+            </div>
+          </div>
+ -->        </div> 
         <div class="small-12 medium-5 columns align-self-middle">
           <h3>The simplest loan contract, the best relationships</h3>
           <p>LeanLoan offers you to customize the simplest contract template for the loan between you and your friends and family.</p>
-          <!-- <a href="#features" id="hero-btn-learn-more" class="hollow button primary">Learn more</a>
-          <span>&nbsp;</span> -->
-          <a href="assets/Leningsovereenkomst.pdf"  id="hero-btn-download-contract" class="button warning" download>Get my contract</a>          
+<!--           <a href="#features" id="hero-btn-learn-more" class="hollow button primary" >Learn more</a>
+          <span>&nbsp;</span>
+ -->          <a href="#"  id="hero-btn-download-contract" class="button warning" data-open="modal-email-contract">Get my contract</a>          
         </div>
         <div class="show-for-medium medium-1 columns"></div>
       </div>
@@ -69,11 +84,25 @@
       </div>
 
     </section> -->
+      <div class="reveal" id="modal-email-contract" data-reveal>
+        <form action="//leanloan.us15.list-manage.com/subscribe/post?u=ea8bc4ca20fbde0c1b73ac0a4&amp;id=b633960286" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <h3>Yes ! Please send me the contract !</h3>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="E-mail address"></input>
+          <input type="submit" value="Subscribe" name="subscribe" id="modal-btn-submit-email" class="button warning">
+          <!-- <a href="#"  id="modal-btn-submit-email" class="button warning">Submit</a> -->
+          <p>Privacy Policy: We hate SPAM and promise to keep your email address safe</p>
+        </form>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
     </body>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/app.js"></script>
+
   </body>
 </html>

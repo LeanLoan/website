@@ -1,6 +1,7 @@
-(function(){
 
-	$(document).foundation();
+$(document).foundation();
+
+$(document).ready(function(){
 
 	var heroBtnLearnMore = $('#hero-btn-learn-more');
 	var heroBtnDownloadContract = $('#hero-btn-download-contract');
@@ -28,6 +29,13 @@
 		);
 	});
 
-})();
+	$('.hero-slideshow').slick({
+		autoplay: true,
+		autoplaySpeed: 1000,
+		fade: true,
+		arrows: false
+	});
+
+});
 
 
