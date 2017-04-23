@@ -51,7 +51,8 @@
           <p>Lean Loan Geeft je de mogeliijheid om op een makkelijke manier een leningscontract tussen familie en vrienden te regelen.</p>
 <!--           <a href="#features" id="hero-btn-learn-more" class="hollow button primary" >Learn more</a>
           <span>&nbsp;</span>
- -->          <a href="#"  id="hero-btn-download-contract" class="button warning" data-open="modal-email-contract">DOWNLOAD HIER JE CONTRACT</a>          
+ -->          <a href="#"  id="hero-btn-download-contract" class="button warning" data-open="modal-email-contract" onclick="ga('send','event','Hero Button Contract',
+'download','NL WEBSITE 23/04',{nonInteraction: true});">DOWNLOAD HIER JE CONTRACT</a>          
         </div>
         <div class="show-for-medium medium-1 columns"></div>
       </div>
@@ -86,11 +87,11 @@
     </section> -->
       <div class="reveal" id="modal-email-contract" data-reveal>
         <form action="//leanloan.us15.list-manage.com/subscribe/post?u=ea8bc4ca20fbde0c1b73ac0a4&amp;id=b633960286" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <h3>Yes ! Please send me the contract !</h3>
+          <h3>Ja! Stuur mij het contract!</h3>
           <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="E-mail address"></input>
-          <input type="submit" value="Subscribe" name="subscribe" id="modal-btn-submit-email" class="button warning">
+          <input type="submit" value="Subscribe" name="subscribe" id="modal-btn-submit-email" class="button warning" onclick="ga('send','event','Push on subscribe','download','NL Website 23/04',{nonInteraction: true});">
           <!-- <a href="#"  id="modal-btn-submit-email" class="button warning">Submit</a> -->
-          <p>Privacy Policy: We hate SPAM and promise to keep your email address safe</p>
+          <p>Privacy Policy: We haten SPAM en beloven uw e-mailadres voor ons te houden.</p>
         </form>
         <button class="close-button" data-close aria-label="Close modal" type="button">
           <span aria-hidden="true">&times;</span>
