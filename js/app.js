@@ -9,7 +9,8 @@ $(document).ready(function(){
 	var modalEmailContract = $('#modal-email-contract');
 	var modalEmailConfirmation = $('#modal-email-confirmation');
 	var modalConfirmationBtnDownload = $('#modal-confirmation-btn-download');
-	var modalBtnClose = $('#modal-btn-close');
+	var modalEmailBtnClose = $('#modal-email-btn-close');
+	var modalDownloadBtnClose = $('#modal-download-btn-close')
 	var mceEMAIL = $('#mce-EMAIL');
 	var mcEmbeddedSubscribeForm = $('#mc-embedded-subscribe-form');
 	
@@ -25,14 +26,24 @@ $(document).ready(function(){
 		});
 
 
-	modalBtnClose.click(function(event) {
-		console.log('modal closed');
+	modalEmailBtnClose.click(function(event) {
+
 		ga(	'send',
 			'event',
-			'Modal closed',
+			'Modal Email closed',
 			'download',
 			'NL Website 23/04',
 			{nonInteraction: true});		
+	});
+
+	modalDownloadBtnClose.click(function(event) {
+		ga(	'send',
+			'event',
+			'Modal Download closed',
+			'download',
+			'NL Website 23/04',
+			{nonInteraction: true});		
+
 	});
 
 	mceEMAIL.click(function(event) {
