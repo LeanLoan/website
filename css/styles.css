@@ -60,8 +60,9 @@ footer {
 
 /* MODAL ////////////////////////////////////////////////////////////////////*/
 
-.reveal h1 {
+.reveal h3 {
 	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 1em;
 }
 
 .reveal p {

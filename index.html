@@ -7,10 +7,32 @@
     <title>LeanLoan, the simplest contract for loans between family and friends</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <!-- Start of Async Drift Code -->
+    <script>
+    !function() {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+      t.factory = function(e) {
+        return function() {
+          var n;
+          return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e, n, o, i;
+        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+      });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('szn65f4r6sr7');
+    </script>
+    <!-- End of Async Drift Code -->  
   </head>
   <body>
     <script>
@@ -31,75 +53,62 @@
     <section class="hero">
       <div class="row">     
         <div class="small-12 medium-6 columns">
-
-        <img class="float-center" src="img/loan-agreement.svg">
-<!--  
-          <div class="hero-slideshow">
-            <div>
-              <img class="float-center" src="img/loan-agreement.svg">
-            </div>
-            <div>
-              <img class="float-center" src="img/loan-agreement-2.svg">
-            </div>
-            <div>
-              <img class="float-center" src="img/loan-agreement-3.svg">
-            </div>
-          </div>
- -->        </div> 
+          <img class="float-center" src="img/loan-agreement.svg">
+        </div> 
         <div class="small-12 medium-5 columns align-self-middle">
           <h3>Veilig en makkelijk lenen</h3>
           <p>Lean Loan Geeft je de mogeliijheid om op een makkelijke manier een leningscontract tussen familie en vrienden te regelen.</p>
-<!--           <a href="#features" id="hero-btn-learn-more" class="hollow button primary" >Learn more</a>
-          <span>&nbsp;</span>
- -->          <a href="#"  id="hero-btn-download-contract" class="button warning" data-open="modal-email-contract" onclick="ga('send','event','Hero Button Contract',
-'download','NL WEBSITE 23/04',{nonInteraction: true});">DOWNLOAD HIER JE CONTRACT</a>          
+          <a  href="#"  
+              id="hero-btn-download-contract" 
+              class="button warning" 
+              data-open="modal-email-contract">
+            DOWNLOAD HIER JE CONTRACT
+          </a>          
         </div>
         <div class="show-for-medium medium-1 columns"></div>
       </div>
-    </section>
-<!--     <section class="features">
-      <a name="features"></a>
-      <div class="feature row align-center">
-        <div class="small-12 medium-4 columns">
-          <img class="feature-image float-center" src="img/placeholder.svg"/>
-        </div>
-        <div class="small-12 medium-8 columns">
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <div class="feature row align-center">
-        <div class="small-12 medium-4 columns">
-          <img class="feature-image float-center" src="img/placeholder.svg"/>
-        </div>
-        <div class="small-12 medium-8 columns">
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <div class="feature row align-center">
-        <div class="small-12 medium-4 columns">
-          <img class="feature-image float-center" src="img/placeholder.svg"/>
-        </div>
-        <div class="small-12 medium-8 columns">
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-
-    </section> -->
-      
-        <div class="reveal" id="modal-email-contract" data-reveal>
-                <form action="//leanloan.us15.list-manage.com/subscribe/post?u=ea8bc4ca20fbde0c1b73ac0a4&amp;id=b633960286" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <h3>Ja, stuur mij het contract!</h3>
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Voeg e-mailadres toe"></input>
-          <input type="submit" value="Subscribe" name="subscribe" id="modal-btn-submit-email" class="button warning" onclick="ga('send','event','Push on subscribe','download','NL Website 23/04',{nonInteraction: true});">
-          <!-- <a href="#"  id="modal-btn-submit-email" class="button warning">Submit</a> -->
-          <p>Privacy beleid: uw e-mailadres wordt voor ons gehouden en wordt niet doorgegeven aan andere bedrijven.Wenst u meer te weten over ons privacy beleid, contacteer ons.</p>
+    </section>      
+        
+    <div class="reveal" id="modal-email-contract" data-reveal>
+      <form action="//leanloan.us15.list-manage.com/subscribe/post-json?u=ea8bc4ca20fbde0c1b73ac0a4&amp;id=b633960286" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <h3>Ja, stuur mij het contract!</h3>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Voeg e-mailadres toe" required></input>
+        <input type="submit" value="Subscribe" name="subscribe" id="modal-btn-submit-email" class="button warning"></input>
+        
+        <p>Privacy beleid: uw e-mailadres wordt voor ons gehouden en wordt niet doorgegeven aan andere bedrijven.Wenst u meer te weten over ons privacy beleid, contacteer ons.</p>
         </form>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
+        <button class="close-button" data-close aria-label="Close modal" type="button" id="modal-confirmation-btn-close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-    </body>
+    </div>
 
+    <div class="reveal" id="modal-email-confirmation" data-reveal>
+    <h3 class="text-center">Dank u !</h3>
+
+    <div class="row">
+        <div class="small-12 text-center columns">
+          <a id="modal-confirmation-btn-download" class="button success" data-close href="/assets/Leningsovereenkomst.pdf" download >Download nu je contract</a>
+        </div>
+      </div>
+        <button class="close-button" data-close aria-label="Close confirmation modal" type="button" id="modal-btn-close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>    
+    
+
+    <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCaqFRtaie0oKPh4AyeguNEBoe4XCLF2tc",
+        authDomain: "leanloan-ea98f.firebaseapp.com",
+        databaseURL: "https://leanloan-ea98f.firebaseio.com",
+        projectId: "leanloan-ea98f",
+        storageBucket: "leanloan-ea98f.appspot.com",
+        messagingSenderId: "171995358513"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.min.js"></script>
