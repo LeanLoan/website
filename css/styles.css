@@ -271,7 +271,7 @@ iPad 3
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
 	.hero {
 		height: 100vh;
-		padding: 7em 0px;
+		padding: 6em 0px;
 		padding-left: 1em;
 		padding-right: 1em;
 
@@ -283,6 +283,23 @@ iPad 3
 
 
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) {
+	.hero {
+		height: 100vh;
+		padding: 6em 0px;
+		padding-left: 1em;
+		padding-right: 1em;
+
+	}
+	.hero img {
+		width: 11em;
+		margin-bottom: 1em;
+	}	
+
+
+}
+
 
 /* iPhone 6+ ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
