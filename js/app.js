@@ -13,7 +13,10 @@ $(document).ready(function(){
 	var modalDownloadBtnClose = $('#modal-download-btn-close')
 	var mceEMAIL = $('#mce-EMAIL');
 	var mcEmbeddedSubscribeForm = $('#mc-embedded-subscribe-form');
-	
+	var modalAdditionalInfo = $("#modal-additional-info");
+	var signed = false;	
+	var btnNoSimpleContract = $("#btnNoSimpleContract");
+	var btnContractButNoEmail = $('#btnContractButNoEmail');
 
 
 	heroBtnDownloadContract.click(function(event) {
@@ -33,7 +36,12 @@ $(document).ready(function(){
 			'Modal Email closed',
 			'download',
 			'NL Website 23/04',
-			{nonInteraction: true});		
+			{nonInteraction: true});
+
+		if(!signed) {
+			modalAdditionalInfo.foundation('open');		
+		}
+
 	});
 
 	modalDownloadBtnClose.click(function(event) {
@@ -63,8 +71,26 @@ $(document).ready(function(){
 			'download',
 			'NL Website 23/04',
 			{nonInteraction: true});
+	});
 
+	btnNoSimpleContract.click(function(event) {
+		ga(	'send',
+			'event',
+			'No Simple Contract',
+			'download',
+			'NL Website 23/04',
+			{nonInteraction: true});
+		modalAdditionalInfo.foundation('close');
 
+	});
+	btnContractButNoEmail.click(function(event) {
+		ga(	'send',
+			'event',
+			'Contract But No Email',
+			'download',
+			'NL Website 23/04',
+			{nonInteraction: true});
+		modalAdditionalInfo.foundation('close');
 	});
 
     $('#mc-embedded-subscribe-form input[type="submit"]').bind('click', function ( event ) {
@@ -110,7 +136,8 @@ $(document).ready(function(){
 
 	function onSignupComplete() {
 		modalEmailContract.foundation('close');
-		modalEmailConfirmation.foundation('open');		
+		modalEmailConfirmation.foundation('open');
+		signed = true;	
 
 	};
 

@@ -81,7 +81,9 @@ footer {
 	font-family: 'Open Sans', sans-serif;
 	padding-right: 2em;
 }
-
+.small-text {
+	font-size: 0.8em;
+}
 footer {
 	background-color: #276aad;
 }
