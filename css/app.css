@@ -2738,7 +2738,7 @@ textarea {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  height: 2.34375rem;
+  height: 2.46875rem;
   margin: 0 0 0.9375rem;
   padding: 0.46875rem;
   border: none;
@@ -2746,7 +2746,7 @@ textarea {
   background-color: #fff;
   box-shadow: inset 0 1px 2px rgba(24, 26, 30, 0.1);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: normal;
   color: #181A1E;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
@@ -2856,7 +2856,7 @@ label {
 
 .input-group-field {
   border-radius: 0;
-  height: 2.40625rem; }
+  height: 2.53125rem; }
 
 .input-group-button {
   padding-top: 0;
@@ -2868,10 +2868,10 @@ label {
   .input-group-button input,
   .input-group-button button,
   .input-group-button label {
-    height: 2.40625rem;
+    height: 2.53125rem;
     padding-top: 0;
     padding-bottom: 0;
-    font-size: 1rem; }
+    font-size: 1.125rem; }
 
 .input-group .input-group-button {
   display: table-cell; }
@@ -2896,7 +2896,7 @@ legend {
     background: #fff; }
 
 select {
-  height: 2.34375rem;
+  height: 2.46875rem;
   margin: 0 0 0.9375rem;
   padding: 0.46875rem;
   appearance: none;
@@ -2904,7 +2904,7 @@ select {
   border-radius: 0.2em;
   background-color: #fff;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: normal;
   color: #181A1E;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
@@ -4170,6 +4170,13 @@ button.button, a.button, li.button {
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08); }
     button.button:hover i, a.button:hover i, li.button:hover i {
       transform: rotate(0deg); }
+  @media screen and (max-width: 39.9375em) {
+    button.button, a.button, li.button {
+      font-size: 1.2em; } }
+
+@media screen and (max-width: 39.9375em) {
+  input {
+    font-size: 1.4rem; } }
 
 .tabs-title.button:not(.is-active) {
   background-color: #b5c1dd; }
@@ -4256,8 +4263,10 @@ section#hello {
     section#hello {
       margin-top: -8.5em; } }
   section#hello .title-container {
-    padding-right: 6em;
-    padding-top: 4em; }
+    padding-top: 5em; }
+    @media print, screen and (min-width: 40em) {
+      section#hello .title-container {
+        padding-top: 0; } }
     section#hello .title-container h1, section#hello .title-container p {
       color: white; }
     section#hello .title-container p {
