@@ -4301,6 +4301,8 @@ section#comment-ca-marche {
     section#comment-ca-marche ul.tabs li {
       float: none !important;
       display: inline-block; }
+  section#comment-ca-marche .tabs-content {
+    margin-top: 2em; }
   section#comment-ca-marche ul.processus {
     list-style: none;
     position: relative;
