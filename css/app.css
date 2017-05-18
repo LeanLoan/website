@@ -4216,6 +4216,10 @@ button.button, a.button, li.button {
         font-size: 1.2em; }
         .top-bar ul li a:hover {
           color: #2567FB; }
+        .top-bar ul li a.language-switcher img {
+          height: 1em;
+          margin-top: -2px;
+          border-radius: 3px; }
       .top-bar ul li:last-child {
         padding-right: 0; }
       @media screen and (max-width: 39.9375em) {
