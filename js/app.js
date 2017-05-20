@@ -22,7 +22,7 @@ $(document).ready(function(){
 			'event',
 			'Hero Button Contract',
 			'download',
-			'NL WEBSITE 23/04',
+			'FR WEBSITE 20/05',
 			{nonInteraction: true});	
 		});
 
@@ -33,7 +33,7 @@ $(document).ready(function(){
 			'event',
 			'Modal Email closed',
 			'download',
-			'NL Website 23/04',
+			'FR WEBSITE 20/05',
 			{nonInteraction: true});
 
 		if(!signed) {
@@ -47,7 +47,7 @@ $(document).ready(function(){
 			'event',
 			'Modal Download closed',
 			'download',
-			'NL Website 23/04',
+			'FR WEBSITE 20/05',
 			{nonInteraction: true});		
 
 	});
@@ -57,7 +57,7 @@ $(document).ready(function(){
 			'event',
 			'Email input clicked',
 			'download',
-			'NL Website 23/04',
+			'FR WEBSITE 20/05',
 			{nonInteraction: true});		
 
 	});
@@ -67,7 +67,7 @@ $(document).ready(function(){
 			'event',
 			'Download pdf contract',
 			'download',
-			'NL Website 23/04',
+			'FR WEBSITE 20/05',
 			{nonInteraction: true});
 	});
 
@@ -76,7 +76,7 @@ $(document).ready(function(){
 			'event',
 			'No Simple Contract',
 			'download',
-			'NL Website 23/04',
+			'FR WEBSITE 20/05',
 			{nonInteraction: true});
 		modalAdditionalInfo.foundation('close');
 
@@ -86,7 +86,7 @@ $(document).ready(function(){
 			'event',
 			'Contract But No Email',
 			'download',
-			'NL Website 23/04',
+			'FR WEBSITE 20/05',
 			{nonInteraction: true});
 		modalAdditionalInfo.foundation('close');
 	});
@@ -103,7 +103,7 @@ $(document).ready(function(){
 			'event',
 			'Push on subscribe',
 			'download',
-			'NL Website 23/04',
+			'FR WEBSITE 20/05',
 			{nonInteraction: true});		
 
 
