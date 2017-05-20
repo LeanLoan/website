@@ -4350,6 +4350,8 @@ button.button, a.button, li.button, input.button {
     background-color: #4e566a; }
   .reveal#modal-email-contract button[type=submit] {
     background-color: #21E792; }
+  .reveal#modal-email-confirmation a.button {
+    background-color: #21E792; }
 
 section#hello {
   background-image: -moz-linear-gradient(110deg, #00d2ff 0%, #4490fa 58%, #2365fb 100%);
