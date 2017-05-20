@@ -115,7 +115,14 @@ $(document).ready(function(){
 		dataType    : 'jsonp',
 		jsonp       : 'c',
 		contentType: "application/json; charset=utf-8",
-		error       : function(err) { alert("Could not connect to the registration server. Please try again later."); },
+		error       : function(err) { 
+			if($form[0].elements.LANG.value == "FR"){
+			  alert("Il semble qu'il y aie une erreur, veuillez réessayer.");
+			} else{
+				alert("Could not connect to the registration server. Please try again later.");
+
+			}
+		},
 		success     : function(data) {
 		    if (data.result != "success") {
 		        
@@ -125,6 +132,7 @@ $(document).ready(function(){
 		        var myFirebaseRef = firebase.database().ref("contacts");
 		        myFirebaseRef.push({
 		          email: $form[0].elements.EMAIL.value,
+		          lang: $form[0].elements.LANG.value,
 		        }, onSignupComplete);
 		       
 		    }
