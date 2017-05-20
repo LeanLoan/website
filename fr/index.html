@@ -77,6 +77,41 @@
       </div>
     </div>
   </header>
+
+  <div class="reveal" id="modal-email-contract" data-reveal>
+    <form action="" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <h2>Envoyez-moi le contrat type</h2>
+      <p>Afin de télécharger le contrat en PDF, nous vous demandons votre adresse email.<p>
+      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Votre adresse email" required></input>
+      <input type="submit" value="Accéder au contrat type" name="subscribe" id="modal-btn-submit-email" class="button"></input>
+      <p class="small">Confidentialité: Votre email est conservé pour nous et ne sont pas transmises à d'autres sociétés. Vous voulez savoir sur notre politique de confidentialité plus, contactez-nous.</p>
+    </form>
+      <button class="close-button button tiny" data-close aria-label="Close modal" type="button" id="modal-email-btn-close"><i class="material-icons float-left">close</i>Fermer</button>
+  </div>
+
+  <div class="reveal" id="modal-email-confirmation" data-reveal>
+    <h3 class="text-center">Merci</h3>
+    <div class="row">
+      <div class="small-12 text-center columns">
+        <a id="modal-confirmation-btn-download" class="button success" data-close href="/files/leanloan-accord-fr.pdf" download >Télécharger le contrat</a>
+      </div>
+    </div>
+    <button class="close-button" data-close aria-label="Close confirmation modal" type="button" id="modal-download-btn-close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="reveal" id="modal-additional-info" data-reveal>
+    <div class="row">
+      <div class="small-12 columns text-center">
+          <h3>Pas interessé ?</h3>
+          <p>Pas de problème ! Dites-nous pourquoi.<p>
+          <a class="button" id="btnNoSimpleContract">J'ai besoin d'une autre solution qu'un accord de contrat.</a>
+          <a class="button" id="btnContractButNoEmail">Je veux faire un contrat mais je ne veux pas donner mon adresse e-mail.</a>
+          <p class="small">L'équipe de LeanLoan vous remercie !<p>
+      </div>
+    </div>
+  </div>
+
   <section id="hello" class="hero" data-magellan-target="comment-ca-marche">
     <div class="row align-middle align-justify">
       <div id="ctahero" class="hide-for-medium small-12 columns text-center">
@@ -85,7 +120,7 @@
       <div class="small-12 medium-6 columns title-container text-center medium-text-left" data-magellan data-options="animationEasing:swing; animationDuration:1000">
         <h1>La solution pour vos emprunt existants et futurs</h1>
         <p class="lead">Leanloan vous permet de conclure des prêt avec la famille et les amis facilement.</p>
-        <a href="#comment-ca-marche" class="button"><i class="material-icons float-left">arrow_downward</i>Comment ca marche</a>
+        <a data-open="modal-email-contract" class="button testing large"><i class="material-icons float-left">done</i>Testez notre solution</a>
       </div>
       <div id="ctahero" class="show-for-medium medium-5 columns text-center">
         <img src="../img/hero-schema.svg">
@@ -230,25 +265,12 @@
     </div> 
   </section>
   <section id="testsolution">
-    <div class="row columns">
-      <h2 class="text-center">Tester notre solution</h2>
-      <form action="//leanloan.us15.list-manage.com/subscribe/post?u=ea8bc4ca20fbde0c1b73ac0a4&amp;id=4664a14140" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div class="row align-center">
-        <div class="columns small-8 medium-4">
-          <input placeholder="Adresse email" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-        </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none">
-            </div>
-            <div class="response" id="mce-success-response" style="display:none">
-            </div>
-            <input type="hidden" value="YES" name="TESTING" class="" id="mce-TESTING">
-          </div>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ea8bc4ca20fbde0c1b73ac0a4_4664a14140" tabindex="-1" value=""></div>
-        <div class="columns small-11 medium-4">
-          <button type="submit" class="button" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"><i class=" material-icons float-left">add</i>Tester la solution</button>
-        </div>
+    <div class="row">
+      <div class="columns small-12 text-center">
+          <h2>Interessé ?</h2>
+          <p>Téléchargez un contrat type et essayer le avec vos amis et membre de votre famille</p>
+          <a data-open="modal-email-contract" class="button testing large"><i class="material-icons float-left">done</i>Testez notre solution</a>
+      </div>
       </div>
     </form>
     </div>
@@ -332,6 +354,6 @@
   <script src="../bower_components/jquery/dist/jquery.js"></script>
   <script src="../bower_components/what-input/dist/what-input.js"></script>
   <script src="../bower_components/foundation-sites/dist/js/foundation.js"></script>
-  <script src="../js/min/app-min.js"></script>
+  <script src="../js/app-min.js"></script>
   </body>
 </html>
