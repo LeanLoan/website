@@ -8,7 +8,7 @@ $(document).ready(function(){
 	var modalEmailConfirmation = $('#modal-email-confirmation');
 	var modalConfirmationBtnDownload = $('#modal-confirmation-btn-download');
 	var modalEmailBtnClose = $('#modal-email-btn-close');
-	var modalDownloadBtnClose = $('#modal-download-btn-close')
+	var modalDownloadBtnClose = $('#modal-download-btn-close');
 	var mceEMAIL = $('#mce-EMAIL');
 	var mcEmbeddedSubscribeForm = $('#mc-embedded-subscribe-form');
 	var modalAdditionalInfo = $("#modal-additional-info");
