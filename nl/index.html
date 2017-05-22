@@ -80,12 +80,49 @@
       </div>
     </div>
   </header>
+
+  <div class="reveal" id="modal-email-contract" data-reveal data-close-on-click="false">
+    <form action="//leanloan.us15.list-manage.com/subscribe/post-json?u=ea8bc4ca20fbde0c1b73ac0a4&amp;id=b633960286" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" lang="lang" target="_blank" novalidate>
+      <h2>Ja, stuur mij het contract!</h2>
+      <p>Afin de télécharger le contrat en PDF, nous vous demandons votre adresse email.<p>
+      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Voeg e-mailadres toe" required></input>
+      <input type="submit" value="Stuur mij het contract" name="subscribe" id="modal-btn-submit-email" class="button"></input>
+      <input type="hidden" value="NL" name="LANG" id="langue"></input>
+      <p class="small">Privacy beleid: uw e-mailadres wordt voor ons gehouden en wordt niet doorgegeven aan andere bedrijven.Wenst u meer te weten over ons privacy beleid, contacteer ons.</p>
+    </form>
+      <button class="close-button button tiny" data-close aria-label="Close modal" type="button" id="modal-email-btn-close"><i class="material-icons float-left">close</i>Sluiten</button>
+  </div>
+
+  <div class="reveal" id="modal-email-confirmation" data-reveal>
+    <h3 class="text-center">Dank u !</h3>
+    <div class="row">
+      <div class="small-12 text-center columns">
+        <a id="modal-confirmation-btn-download" class="button" data-close href="/files/leanloan-accord-fr.pdf" download >Download nu je contract (.pdf)</a>
+        <p class="small">L'équipe de LeanLoan vous remercie !<p>
+      </div>
+      <div class="small-12 text-center columns">
+        <button class="close-button button tiny" data-close aria-label="Close confirmation modal" type="button" id="modal-download-btn-close"><i class="material-icons float-left">close</i>Sluiten</button>
+      </div>
+    </div>
+  </div>
+  <div class="reveal" id="modal-additional-info" data-reveal>
+    <div class="row">
+      <div class="small-12 columns text-center">
+          <h3>Waarom verlaat u onze website?</h3>
+          <p>Pas de problème ! Dites-nous pourquoi.<p>
+          <a class="button" id="btnNoSimpleContract">Ik heb een andere oplossing nodig dan een contract</a>
+          <a class="button" id="btnContractButNoEmail">Ik wil een contract maken maar ik wens mijn e-mailadres niet te geven</a>
+          <p class="small">L'équipe de LeanLoan vous remercie !<p>
+      </div>
+    </div>
+  </div>
+
   <section id="hello" class="hero" data-magellan-target="comment-ca-marche">
     <div class="row align-middle">
       <div class="medium-6 columns title-container" data-magellan data-options="animationEasing:swing; animationDuration:1000">
         <h1>De oplossing voor uw bestaande en toekomstige leningen</h1>
         <p class="lead">LeanLoan de beste oplossing om te lenen tussen familie en vrienden</p>
-        <a href="#comment-ca-marche" class="button"><i class="material-icons float-left">arrow_downward</i>Comment ca marche</a>
+        <a data-open="modal-email-contract" class="button testing large"><i class="material-icons float-left">done</i>Testez notre solution</a>
       </div>
       <div id="ctahero" class="show-for-medium medium-5 end columns text-center">
         <img src="../img/hero-schema.svg">
@@ -104,59 +141,59 @@
 
         <div class="tabs-content" data-tabs-content="example-tabs">
           <div class="tabs-panel is-active" id="emprunt">
-            <div class="row align-center">
-              <ul class="processus">
+            <div class="row">
+              <ul class="processus columns">
                 <li>
-                  <div class="row align-center align-middle">
-                    <div class="small-5 medium-4 columns text-center image">
+                  <div class="row align-middle">
+                    <div class="small-5 medium-3 medium-offset-2 text-right columns image">
                       <img src="../img/step/emprunter-step01.svg">
                     </div>
-                    <div class="medium-1 columns bullets text-center"><span class="numeros">1</span></div>
-                    <div class="small-5 medium-4 columns description">
+                    <div class="small-2 columns bullets text-center"><span class="numeros">1</span></div>
+                    <div class="small-5 medium-3 columns description">
                       <p>Bespreek met je vriend of familielid hoe hij kan helpen om je project te realiseren.</p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="row align-center align-middle" >
-                    <div class="small-5 medium-4 columns text-center image">
+                  <div class="row align-middle">
+                    <div class="small-5 medium-3 medium-offset-2 text-right columns image">
                       <img src="../img/step/emprunter-step02.svg">
                     </div>
-                    <div class="medium-1 columns bullets text-center"><span class="numeros">2</span></div>
-                    <div class="small-5 medium-4 end columns description">
+                    <div class="small-2 columns bullets text-center"><span class="numeros">2</span></div>
+                    <div class="small-5 medium-3 columns description">
                       <p>Dankzij LeanLoan kunnen jullie jullie overeenkomst formaliseren.</p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="row align-center align-middle" >
-                    <div class="small-5 medium-4 columns text-center image">
+                  <div class="row align-middle">
+                    <div class="small-5 medium-3 medium-offset-2 text-right columns image">
                       <img src="../img/step/emprunter-step03.svg">
                     </div>
-                    <div class="medium-1 columns bullets text-center"><span class="numeros">3</span></div>
-                    <div class="small-5 medium-4 end columns description">
+                    <div class="small-2 columns bullets text-center"><span class="numeros">3</span></div>
+                    <div class="small-5 medium-3 columns description">
                       <p>In de laatste stap gaat je vriend of familelid akkoord met de overeenkomst en schrijft het geld over.</p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="row align-center align-middle" >
-                    <div class="small-5 medium-4 columns text-center image">
+                  <div class="row align-middle">
+                    <div class="small-5 medium-3 medium-offset-2 text-right columns image">
                       <img src="../img/step/emprunter-step04.svg">
                     </div>
-                    <div class="medium-1 columns bullets text-center"><span class="numeros">4</span></div>
-                    <div class="small-5 medium-4 end columns description">
+                    <div class="small-2 columns bullets text-center"><span class="numeros">4</span></div>
+                    <div class="small-5 medium-3 columns description">
                       <p>Proficiat !</p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="row align-center align-middle" >
-                    <div class="small-5 medium-4 columns text-center image">
+                  <div class="row align-middle">
+                    <div class="small-5 medium-3 medium-offset-2 text-right columns image">
                       <img src="../img/step/emprunter-step05.svg">
                     </div>
-                    <div class="medium-1 columns bullets text-center"><span class="numeros">5</span></div>
-                    <div class="small-5 medium-4 end columns description">
+                    <div class="small-2 columns bullets text-center"><span class="numeros">5</span></div>
+                    <div class="small-5 medium-3 columns description">
                       <p>LeanLoan regelt alles !</p>
                     </div>
                   </div>
@@ -168,56 +205,56 @@
             <div class="row align-center">
               <ul class="processus">
                 <li>
-                  <div class="row align-center align-middle">
-                    <div class="small-5 medium-4 columns text-center image">
+                  <div class="row align-middle">
+                    <div class="small-5 medium-3 medium-offset-2 text-right columns image">
                       <img src="../img/step/pret-step01.svg">
                     </div>
-                    <div class="medium-1 columns bullets text-center"><span class="numeros">1</span></div>
-                    <div class="small-5 medium-4 end columns description">
+                    <div class="small-2 columns bullets text-center"><span class="numeros">1</span></div>
+                    <div class="small-5 medium-3 columns description">
                       <p>U wenst  je vriend of familie te helpen door hem geld te lenen.</p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="row align-center align-middle" >
-                    <div class="small-5 medium-4 columns text-center image">
+                  <div class="row align-middle">
+                    <div class="small-5 medium-3 medium-offset-2 text-right columns image">
                       <img src="../img/step/pret-step02.svg">
                     </div>
-                    <div class="medium-1 columns bullets text-center"><span class="numeros">2</span></div>
-                    <div class="small-5 medium-4 end columns description">
+                    <div class="small-2 columns bullets text-center"><span class="numeros">2</span></div>
+                    <div class="small-5 medium-3 columns description">
                       <p>Dankzij LeanLoan kan je je vriend of familielid helpen.</p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="row align-center align-middle" >
-                    <div class="small-5 medium-4 columns text-center image">
+                  <div class="row align-middle">
+                    <div class="small-5 medium-3 medium-offset-2 text-right columns image">
                       <img src="../img/step/pret-step03.svg">
                     </div>
-                    <div class="medium-1 columns bullets text-center"><span class="numeros">3</span></div>
-                    <div class="small-5 medium-4 end columns description">
+                    <div class="small-2 columns bullets text-center"><span class="numeros">3</span></div>
+                    <div class="small-5 medium-3 columns description">
                       <p>In de laatste stap aanvaardt je vriend of familied je help en ontvangt het bedrag.</p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="row align-center align-middle" >
-                    <div class="small-5 medium-4 columns text-center image">
+                  <div class="row align-middle">
+                    <div class="small-5 medium-3 medium-offset-2 text-right columns image">
                       <img src="../img/step/pret-step04.svg">
                     </div>
-                    <div class="medium-1 columns bullets text-center"><span class="numeros">4</span></div>
-                    <div class="small-5 medium-4 end columns description">
+                    <div class="small-2 columns bullets text-center"><span class="numeros">4</span></div>
+                    <div class="small-5 medium-3 columns description">
                       <p>Proficiat. Je hebt op een veilige wijze je vriend of familielid geholpen.</p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="row align-center align-middle" >
-                    <div class="small-5 medium-4 columns text-center image">
+                  <div class="row align-middle">
+                    <div class="small-5 medium-3 medium-offset-2 text-right columns image">
                       <img src="../img/step/emprunter-step05.svg">
                     </div>
-                    <div class="medium-1 columns bullets text-center"><span class="numeros">5</span></div>
-                    <div class="small-5 medium-4 end columns description">
+                    <div class="small-2 columns bullets text-center"><span class="numeros">5</span></div>
+                    <div class="small-5 medium-3 columns description">
                       <p>LeanLoan regelt alles !</p>
                     </div>
                   </div>
@@ -230,25 +267,12 @@
     </div> 
   </section>
   <section id="testsolution">
-    <div class="row columns">
-      <h2 class="text-center">Tester notre solution</h2>
-      <form action="//leanloan.us15.list-manage.com/subscribe/post?u=ea8bc4ca20fbde0c1b73ac0a4&amp;id=4664a14140" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div class="row align-center">
-        <div class="columns small-8 medium-4">
-          <input placeholder="Adresse email" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-        </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none">
-            </div>
-            <div class="response" id="mce-success-response" style="display:none">
-            </div>
-            <input type="hidden" value="YES" name="TESTING" class="" id="mce-TESTING">
-          </div>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ea8bc4ca20fbde0c1b73ac0a4_4664a14140" tabindex="-1" value=""></div>
-        <div class="columns small-11 medium-4">
-          <button type="submit" class="button" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"><i class=" material-icons float-left">add</i>Tester la solution</button>
-        </div>
+    <div class="row">
+      <div class="columns small-12 text-center">
+          <h2>Interessé ?</h2>
+          <p>Téléchargez un contrat type et essayer le avec vos amis et membre de votre famille</p>
+          <a data-open="modal-email-contract" class="button testing large"><i class="material-icons float-left">done</i>Testez notre solution</a>
+      </div>
       </div>
     </form>
     </div>
@@ -332,6 +356,6 @@
   <script src="../bower_components/jquery/dist/jquery.js"></script>
   <script src="../bower_components/what-input/dist/what-input.js"></script>
   <script src="../bower_components/foundation-sites/dist/js/foundation.js"></script>
-  <script src="../js/min/app-min.js"></script>
+  <script src="../js/app-min.js"></script>
   </body>
 </html>

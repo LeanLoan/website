@@ -10,9 +10,9 @@ if (navigator.language) langue=navigator.language;
 else if (navigator.userLanguage) langue=navigator.userLanguage;
 else langue='';
 
-// si langue FR alors BIENVENUE, sinon WELCOME
-if (langue.substr(0, 2)=='fr') url='fr/';
-else url='nl/';
+// si langue FR alors FR, sinon NL
+if (langue.substr(0, 2)=='nl') url='nl/';
+else url='fr/';
 
 // redirection
 location.replace(url);
