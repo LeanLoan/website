@@ -10,7 +10,7 @@ $(document).ready(function(){
 	var modalEmailBtnClose = $('#modal-email-btn-close');
 	var modalDownloadBtnClose = $('#modal-download-btn-close');
 	var mceEMAIL = $('#mce-EMAIL');
-	var mcEmbeddedSubscribeForm = $('#mc-embedded-subscribe-form');
+	var mcEmbeddedSubscribeForm = $('#modal-email-contract #mc-embedded-subscribe-form');
 	var modalAdditionalInfo = $("#modal-additional-info");
 	var signed = false;	
 	var btnNoSimpleContract = $("#btnNoSimpleContract");
