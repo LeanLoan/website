@@ -10,7 +10,7 @@ $(document).ready(function() {
     var modalEmailBtnClose = $('#modal-email-btn-close');
     var modalDownloadBtnClose = $('#modal-download-btn-close');
     var mceEMAIL = $('#mce-EMAIL');
-    var mcEmbeddedSubscribeForm = $('#modal-email-contract #mc-embedded-subscribe-form');
+    var mcEmbeddedSubscribeForm = $('#mc-embedded-subscribe-form');
     var mcEmbeddedBetaSubscribeForm = $('#mc-embedded-beta-subscribe-form');
     var modalAdditionalInfo = $("#modal-additional-info");
     var signed = false;
@@ -85,68 +85,71 @@ $(document).ready(function() {
         modalAdditionalInfo.foundation('close');
     });
 
-    $('#mc-embedded-subscribe-form button[type="submit"]').bind('click', function(event) {
+    $('#modal-btn-submit-email').bind('click', function(event) {
         if (event) event.preventDefault();
-        console.log('download');
-        signup(mcEmbeddedSubscribeForm);
+        console.log('bouton clicked');
+        onSignupComplete(mcEmbeddedSubscribeForm);
     });
 
-    $('#mc-embedded-beta-subscribe-form button[type="submit"]').bind('click', function(event) {
-        if (event) event.preventDefault();
-        console.log('beta');
-        signup(mcEmbeddedBetaSubscribeForm);
-    });
+    // $('#mc-embedded-beta-subscribe-form button[type="submit"]').bind('click', function(event) {
+    //     if (event) event.preventDefault();
+    //     console.log('beta');
+    //     signup(mcEmbeddedBetaSubscribeForm);
+    // });
 
 
 
 
-    function signup($form) {
+    // function signup($form) {
 
-        ga('send',
-            'event',
-            'Push on subscribe',
-            'download',
-            'FR WEBSITE 20/05', { nonInteraction: true });
+    //     ga('send',
+    //         'event',
+    //         'Push on subscribe',
+    //         'download',
+    //         'FR WEBSITE 20/05', { nonInteraction: true });
 
+    //     console.log('$form traité');
+    //     $.ajax({
+    //         type: $form.attr('method'),
+    //         url: $form.attr('action'),
+    //         data: $form.serialize(),
+    //         cache: false,
+    //         dataType: 'json',
+    //         jsonp: 'c',
+    //         contentType: "application/json; charset=utf-8",
+    //         error: function(err) {
+    //             if ($form[0].elements.LANG.value == "FR") {
+    //                 alert("Il semble qu'il y aie une erreur, veuillez réessayer.");
+    //             } else {
+    //                 alert("Could not connect to the registration server. Please try again later.");
+    //             }
+    //         },
+    //         success: function(data) {
+    //             if (data.result != "success") {
+    //             	console.log('data = pas ok');
+    //             } else {
 
-        $.ajax({
-            type: $form.attr('method'),
-            url: $form.attr('action'),
-            data: $form.serialize(),
-            cache: false,
-            dataType: 'jsonp',
-            jsonp: 'c',
-            contentType: "application/json; charset=utf-8",
-            error: function(err) {
-                if ($form[0].elements.LANG.value == "FR") {
-                    alert("Il semble qu'il y aie une erreur, veuillez réessayer.");
-                } else {
-                    alert("Could not connect to the registration server. Please try again later.");
+    //                 var myFirebaseRef = firebase.database().ref("contacts");
+    //                 myFirebaseRef.push({
+    //                     email: $form[0].elements.EMAIL.value,
+    //                     lang: $form[0].elements.LANG.value,
+    //                 }, onSignupComplete);
 
-                }
-            },
-            success: function(data) {
-                if (data.result != "success") {
+    //             }
+    //         }
+    //     });
+    // }
 
-
-                } else {
-
-                    var myFirebaseRef = firebase.database().ref("contacts");
-                    myFirebaseRef.push({
-                        email: $form[0].elements.EMAIL.value,
-                        lang: $form[0].elements.LANG.value,
-                    }, onSignupComplete);
-
-                }
-            }
-        });
-    }
-
-    function onSignupComplete() {
+    function onSignupComplete($form) {
+    		var myFirebaseRef = firebase.database().ref("contacts");
+    		myFirebaseRef.push({
+    		    email: $form[0].elements.EMAIL.value,
+    		    lang: $form[0].elements.LANG.value,
+    		});
         modalEmailContract.foundation('close');
         modalEmailConfirmation.foundation('open');
         signed = true;
-
+        console.log('modale = ouverte');
     }
 
 });
