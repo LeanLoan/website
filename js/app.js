@@ -141,15 +141,26 @@ $(document).ready(function() {
     // }
 
     function onSignupComplete($form) {
+        var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+        var theemail = $form[0].elements.EMAIL.value;
+
+        if ($form[0].elements.EMAIL.value == "" || !regex.test(theemail)){
+            if ($form[0].elements.LANG.value == "FR"){
+                alert("Veuillez vérifier le champ E-mail");
+            } else if ($form[0].elements.LANG.value == "NL"){
+                alert("Please verifiy the E-mail field");
+            }
+        } else {
     		var myFirebaseRef = firebase.database().ref("contacts");
     		myFirebaseRef.push({
     		    email: $form[0].elements.EMAIL.value,
     		    lang: $form[0].elements.LANG.value,
     		});
-        modalEmailContract.foundation('close');
-        modalEmailConfirmation.foundation('open');
-        signed = true;
-        console.log('modale = ouverte');
+            modalEmailContract.foundation('close');
+            modalEmailConfirmation.foundation('open');
+            signed = true;
+            console.log('modale = ouverte');
+        }
     }
 
 });
