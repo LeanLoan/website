@@ -9,6 +9,33 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/foundation-datepicker.min.css">
+    <!-- Start of Async Drift Code -->
+    <script>
+    !function() {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+      t.factory = function(e) {
+        return function() {
+          var n;
+          return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e, n, o, i;
+        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+      });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.config({
+      locale: "fr"
+    });
+    drift.load('szn65f4r6sr7');
+    </script>
+    <!-- End of Async Drift Code -->
     <!-- Hotjar Tracking Code for www.leanloan.be -->
     <script>
         (function(h,o,t,j,a,r){
@@ -46,10 +73,10 @@
         <div class="top-bar-right">
           <div id="responsive-menu">
             <ul class="menu" data-magellan data-options="animationEasing:swing; animationDuration:1000">
-              <li><a href="#hello" class="button gris01"><i class="fa fa-floppy-o" aria-hidden="true"></i> Sauvegarder</a></li>
+              <li><a href="#" data-open="preview" class="button gris01"><i class="fa fa-floppy-o" aria-hidden="true"></i> Sauvegarder</a></li>
               <li><a href="#" data-open="preview" class="button"><i class="fa fa-file-text-o" aria-hidden="true"></i>Aperçu</a></li>
               <li><a href="#" class="button bleuintermediaire"><i class="fa fa-external-link-square" aria-hidden="true"></i>Partager</a></li>
-              <li><a href="#" class="button green"><i class="fa fa-check-circle" aria-hidden="true"></i>Valider l'accord</a></li>
+              <li><a href="#" data-open="preview" class="button green"><i class="fa fa-check-circle" aria-hidden="true"></i>Valider l'accord</a></li>
             </ul>
             </div>
           </div>
@@ -69,6 +96,8 @@
           <legend>Montant :</legend>
           <input type="number" id="amount" placeholder="€">
           <input id="moneyreceived" type="checkbox"><label for="moneyreceived">La somme à déjà été versée à l'emprunteur</label>
+          <legend>Numéro de téléphone :</legend>
+          <input type="tel" id="phonenumber" placeholder="Votre numéro de téléphone">
         </div>
         <div class="small-12 medium-8 columns">
           <legend>Raison du prêt :</legend>
