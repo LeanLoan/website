@@ -1,0 +1,405 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leanloan Beta Application</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/foundation-datepicker.min.css">
+    <!-- Hotjar Tracking Code for www.leanloan.be -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:484337,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  </head>
+  <body>
+
+<!-- Modals -->
+
+  <div class="reveal" id="preview" data-reveal>
+    <h2>En cours de développement</h2>
+    <p>En attendant que la solution d'aperçu soit fonctionnelle, vous pouvez télécharger un exemple d'accord.</p>
+    <a id="modal-confirmation-btn-download" class="button large green" data-close target="_blank" href="https://www.leanloan.be/files/leanloan-accord-fr.pdf" download >Télécharger le contrat (.pdf)</a>
+    <p class="small">L'équipe de LeanLoan vous remercie !<p>
+    <button class="button gris01" data-close aria-label="Close modal" type="button" id="modal-email-btn-close"><i class="material-icons float-left">close</i>Fermer</button>
+  </div>
+
+
+  <header data-sticky-container>
+    <div class="top-bar" data-sticky data-options="marginTop:0;stickyOn: small" data-top-anchor="0">
+      <div class="top-bar-title" data-magellan data-options="animationEasing:swing; animationDuration:1000">
+        <a href="#hello" alt="LeanLoan.be"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 692.63 93.35"><defs><style></style></defs><title>LeanLoan.be</title><path class="a" d="M17.64,7.63H.21V97.75H58.44V83.16H17.64ZM91.81,59.24h31.07V44.79H91.81V22.23h39.45V7.63H74.38V97.75H132.2V83.16H91.81ZM174.75,7,140.84,97.75h17.29l7.3-20.27h34.86l7.3,20.27h17.7L191.37,7ZM170.57,63l12.29-34L195,63Zm130.77,8.11L257.43,7.63H239.87V97.75h17V34.65l43.77,63.09h17.7V7.63h-17Zm56.87-63.5H340.78V97.75H399V83.16h-40.8ZM458.18,6c-31.88,0-49.31,23.37-49.31,46.88,0,24.59,18.37,46.47,48.1,46.47,30.4,0,49.72-23.37,49.72-48.37C506.68,26.41,488.17,6,458.18,6Zm-.81,78.63c-20.13,0-30.26-16.89-30.26-32.29,0-16.21,10.81-31.61,30.8-31.61S488.58,36,488.58,52.08C488.58,68.57,477.23,84.64,457.37,84.64ZM549.23,7,515.32,97.75h17.29l7.29-20.27h34.86l7.3,20.27h17.7L565.85,7ZM545,63l12.29-34L569.5,63ZM675.82,7.63v63.5L631.91,7.63H614.35V97.75h17V34.65l43.77,63.09h17.7V7.63Z" transform="translate(-0.21 -6.01)"/></svg></a>
+      </div>
+  <!--     <a href="#" class="language-switcher"><img src="img/nl.svg" alt="Dutch"></a> -->
+      <div class="float-right" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+      </div>
+        <div class="top-bar-right">
+          <div id="responsive-menu">
+            <ul class="menu" data-magellan data-options="animationEasing:swing; animationDuration:1000">
+              <li><a href="#hello" class="button gris01"><i class="fa fa-floppy-o" aria-hidden="true"></i> Sauvegarder</a></li>
+              <li><a href="#" data-open="preview" class="button"><i class="fa fa-file-text-o" aria-hidden="true"></i>Aperçu</a></li>
+              <li><a href="#" class="button bleuintermediaire"><i class="fa fa-external-link-square" aria-hidden="true"></i>Partager</a></li>
+              <li><a href="#" class="button green"><i class="fa fa-check-circle" aria-hidden="true"></i>Valider l'accord</a></li>
+            </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="intro">
+    <div class="row">
+      <div class="small-12 columns">
+        <h1 class="text-center">Configurez votre accord de prêt simplement avec LeanLoan</h1>
+        <h2><span>1</span><strong>Objet du prêt : </strong>le définissez le montant et la raison de votre prêt.</h2>
+      </div>
+    </div>
+    <div class="row">
+        <div class="small-12 medium-4 columns">
+          <legend>Montant :</legend>
+          <input type="number" id="amount" placeholder="€">
+          <input id="moneyreceived" type="checkbox"><label for="moneyreceived">La somme à déjà été versée à l'emprunteur</label>
+        </div>
+        <div class="small-12 medium-8 columns">
+          <legend>Raison du prêt :</legend>
+          <input type="text" id="why" placeholder="Acheter une voiture,...">
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 columns" data-magellan data-options="animationEasing:swing; animationDuration:1000">
+          <a href="#refund" class="button large endsection"><i class="material-icons">arrow_downward</i>Passer aux modalités de paiements</a>
+        </div>
+    </div>
+  </section>
+<section id="refund">
+  <div class="row">
+    <div class="small-12 columns">
+      <h2><span>2</span><strong>Modalités de reboursement : </strong>choisissez le type de reboursement qui convient aux deux parties.</h2>
+
+      <div class="row">
+        <div class="small-12 medium-4 columns">
+          <input type="radio" name="refund" value="refund-recurrent" id="refund-recurrent" required><label for="refund-recurrent">Basé sur des tranches</label>
+        </div>
+        <div class="small-12 medium-4 columns">
+          <input type="radio" name="refund" value="refund-date" id="refund-date"><label for="refund-date">Basé sur échéance</label>
+        </div>
+        <div class="small-12 medium-4 columns">
+          <input type="radio" name="refund" value="refund-other" id="refund-other"><label for="refund-other">Autre</label>
+        </div>
+      </div>
+      <div class="refund-recurrent selected callout">
+        <div class="row">
+          <div class="small-6 medium-3 columns">
+            <legend>Valeur (€)</legend>
+            <input type="number" class="" id="refund-number" placeholder="€">
+          </div>
+          <div class="small-6 medium-3 columns">
+            <legend>par</legend>
+            <select id="refund-frequency">
+              <option value="" class="initial" selected>Semaines</option>
+              <option value="Monsieur">Mois</option>
+              <option value="Madame">Ans</option>
+            </select>
+          </div>
+          <div class="small-12 medium-6 columns">
+            <legend>A partir du :</legend>
+            <input type="text" class="dating" id="refund-start" placeholder="Date de début">
+          </div>
+        </div>
+        </div>
+      <div class="refund-date selected callout">
+        <div class="row">
+          <div class="small-6 medium-4 columns">
+            <legend for="refund-start">Date de fin:</legend>
+            <input type="text" class="dating" id="refund-start" placeholder="Date de fin">
+          </div>
+        </div>
+        </div>
+      <div class="refund-other selected callout">
+        <div class="row">
+          <div class="small-12 columns">
+            <legend for="refund-other">Autre engagement:</legend>
+            <textarea id="refund-other" placeholder="Ex: Quand l'emprunteur aura un job, ..."></textarea>
+            <p class="help-text">pour des raisons juridiques nous vous recommandons d’indiquer une date butoir pour la fin du remboursement</p>
+          </div>
+        </div>
+        </div>
+      <div class="row">
+          <div class="small-12 columns" data-magellan data-options="animationEasing:swing; animationDuration:1000">
+            <a href="#informations" class="button large endsection"><i class="material-icons">arrow_downward</i>Remplir les informations du prêteur et emprunteur</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="informations" data-magellan-targer="informations">
+  <div class="row">
+    <div class="columns">
+      <h2><span>3</span><strong>Informations personnelles : </strong>Remplissez les informations des deux parties.</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 medium-6 columns bordered-right">
+      <legend>Informations civiles de l’emprunteur :</legend>
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <select id="empr-genre">
+            <option value="" class="initial" disabled selected hidden>Monsieur</option>
+            <option value="Monsieur">Monsieur</option>
+            <option value="Madame">Madame</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <input type="text" id="empr-lname" placeholder="Nom">
+        </div>
+        <div class="small-12 medium-6 columns">
+          <input type="text" id="empr-fname" placeholder="Prénom">
+        </div>
+
+        <div class="small-12 medium-6 columns">
+          <input type="text" id="empr-nationality" placeholder="Nationalité">
+        </div>
+        <div class="small-12 medium-6 columns">
+          <input type="text" class="dating" id="empr-birthday" placeholder="Date de naissance">
+        </div>
+
+        <div class="small-12 medium-6 end columns">
+          <input type="text" id="empr-birdthplace" placeholder="Lieu de naissance">
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-6 end columns">
+          <select id="empr-maried-civility">
+            <option value="" class="initial" disabled selected hidden>Célibataire</option>
+            <option value="empr-single">Célibataire</option>
+            <option value="empr-maried">Marié(e)</option>
+            <option value="empr-cohabitant">Cohabitant</option>
+            <option value="empr-legal-cohabitant">Cohabitant Légal</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="empr-maried empr-civility callout">
+        <div class="row">
+          <div class="small-12 columns">
+            <legend>Informations civiles de l'épouse ou époux de l'emprunteur:</legend>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-6 columns">
+            <select id="empr-maried-genre">
+              <option value="" class="initial" disabled selected hidden>Monsieur</option>
+              <option value="Monsieur">Monsieur</option>
+              <option value="Madame">Madame</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-6 columns">
+            <input type="text" id="empr-maried-lname" placeholder="Nom">
+          </div>
+          <div class="small-12 medium-6 columns">
+            <input type="text" id="empr-maried-fname" placeholder="Prénom">
+          </div>
+
+          <div class="small-12 medium-6 columns">
+            <input type="text" id="empr-maried-nationality" placeholder="Nationalité">
+          </div>
+          <div class="small-12 medium-6 columns">
+            <input type="text" class="dating" id="empr-maried-birthday" placeholder="Date de naissance">
+          </div>
+
+          <div class="small-12 medium-6 end columns">
+            <input type="text" id="empr-maried-birdthplace" placeholder="Lieu de naissance">
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <legend>Adresse du domicile de l'épouse ou époux de l'emprunteur:</legend>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-6 columns">
+            <input type="text" id="empr-maried--adr-street" placeholder="Rue">
+          </div>
+          <div class="small-12 medium-6 columns end">
+            <input type="text" id="empr-maried--adr-city" placeholder="Ville">
+          </div>
+          <div class="small-12 medium-6 columns">
+            <input type="text" id="empr-maried--adr-postalcode" placeholder="Code postal">
+          </div>
+          <div class="small-12 medium-6 columns end">
+            <input type="text" id="empr-maried--country" placeholder="Pays">
+          </div>
+        </div>
+      </div>
+
+      <legend>Adresse du domicile de l'emprunteur :</legend>
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <input type="text" id="empr-adr-street" placeholder="Rue">
+        </div>
+        <div class="small-12 medium-6 columns end">
+          <input type="text" id="empr-adr-city" placeholder="Ville">
+        </div>
+        <div class="small-12 medium-6 columns">
+          <input type="text" id="empr-adr-postalcode" placeholder="Code postal">
+        </div>
+        <div class="small-12 medium-6 columns end">
+          <input type="text" id="empr-country" placeholder="Pays">
+        </div>
+      </div>
+      <legend>Informations bancaires de l'emprunteur :</legend>
+      <input type="text" id="empr-iban" placeholder="Compte IBAN">
+      <legend>Adresse email de l'emprunteur :</legend>
+      <input type="email" id="empr-iban" placeholder="Adresse e-mail">
+    </div>
+  
+    <div class="small-12 medium-6 columns">
+      <legend>Informations civiles du prêteur :</legend>
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <select id="pretr-genre">
+            <option value="" class="initial" disabled selected hidden>Monsieur</option>
+            <option value="Monsieur">Monsieur</option>
+            <option value="Madame">Madame</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <input type="text" id="pretr-lname" placeholder="Nom">
+        </div>
+        <div class="small-12 medium-6 columns">
+          <input type="text" id="pretr-fname" placeholder="Prénom">
+        </div>
+
+        <div class="small-12 medium-6 columns">
+          <input type="text" id="pretr-nationality" placeholder="Nationalité">
+        </div>
+        <div class="small-12 medium-6 columns">
+          <input type="text" class="dating" id="pretr-birthday" placeholder="Date de naissance">
+        </div>
+
+        <div class="small-12 medium-6 end columns">
+          <input type="text" id="pretr-birdthplace" placeholder="Lieu de naissance">
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-6 end columns">
+          <select id="pretr-maried-civility">
+            <option value="" class="initial" disabled selected hidden>Célibataire</option>
+            <option value="pretr-single">Célibataire</option>
+            <option value="pretr-maried">Marié(e)</option>
+            <option value="pretr-cohabitant">Cohabitant</option>
+            <option value="pretr-legal-cohabitant">Cohabitant Légal</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="pretr-maried pretr-civility callout">
+        <div class="row">
+          <div class="small-12 columns">
+            <legend>Informations civiles de l'épouse ou époux de l'emprunteur:</legend>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-6 columns">
+            <select id="pretr-maried-genre">
+              <option value="" class="initial" disabled selected hidden>Monsieur</option>
+              <option value="Monsieur">Monsieur</option>
+              <option value="Madame">Madame</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-6 columns">
+            <input type="text" id="pretr-maried-lname" placeholder="Nom">
+          </div>
+          <div class="small-12 medium-6 columns">
+            <input type="text" id="pretr-maried-fname" placeholder="Prénom">
+          </div>
+
+          <div class="small-12 medium-6 columns">
+            <input type="text" id="pretr-maried-nationality" placeholder="Nationalité">
+          </div>
+          <div class="small-12 medium-6 columns">
+            <input type="text" class="dating" id="pretr-maried-birthday" placeholder="Date de naissance">
+          </div>
+
+          <div class="small-12 medium-6 end columns">
+            <input type="text" id="pretr-maried-birdthplace" placeholder="Lieu de naissance">
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <legend>Adresse du domicile de l'épouse ou époux de l'emprunteur:</legend>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-6 columns">
+            <input type="text" id="pretr-maried-adr-street" placeholder="Rue">
+          </div>
+          <div class="small-12 medium-6 columns end">
+            <input type="text" id="pretr-maried-adr-city" placeholder="Ville">
+          </div>
+          <div class="small-12 medium-6 columns">
+            <input type="text" id="pretr-maried-adr-postalcode" placeholder="Code postal">
+          </div>
+          <div class="small-12 medium-6 columns end">
+            <input type="text" id="pretr-maried-country" placeholder="Pays">
+          </div>
+        </div>
+      </div>
+
+      <legend>Adresse du domicile de l'emprunteur :</legend>
+      <div class="row">
+        <div class="small-12 medium-6 columns">
+          <input type="text" id="pretr-adr-street" placeholder="Rue">
+        </div>
+        <div class="small-12 medium-6 columns end">
+          <input type="text" id="pretr-adr-city" placeholder="Ville">
+        </div>
+        <div class="small-12 medium-6 columns">
+          <input type="text" id="pretr-adr-postalcode" placeholder="Code postal">
+        </div>
+        <div class="small-12 medium-6 columns end">
+          <input type="text" id="pretr-country" placeholder="Pays">
+        </div>
+      </div>
+      <legend>Informations bancaires de l'emprunteur :</legend>
+      <input type="text" id="pretr-iban" placeholder="Compte IBAN">
+      <legend>Adresse email de l'emprunteur :</legend>
+      <input type="email" id="pretr-iban" placeholder="Adresse e-mail">
+    </div>
+  </div>
+  <div class="row">
+      <div class="small-12 text-center columns">
+        <a href="#" class="button large endsection gris01"><i class="fa fa-floppy-o" aria-hidden="true"></i>Sauvegarder votre accord brouillon</a>
+        <a href="#" class="button large endsection"><i class="fa fa-file-text-o" aria-hidden="true"></i>Voir l'accord (aperçu)</a>
+        <a href="#" class="button large endsection bleuintermediaire"><i class="fa fa-external-link-square" aria-hidden="true"></i>Partager l'accord</a>
+      </div>
+  </div>
+</section>
+
+    <script src="https://use.fontawesome.com/802c8bb387.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/dist/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/foundation-datepicker.js"></script>
+  </body>
+</html>
