@@ -160,6 +160,7 @@ $(document).ready(function() {
             modalEmailConfirmation.foundation('open');
             signed = true;
             console.log('modale = ouverte');
+            window.location.href="http://agraff.com/leanloan/appbeta/";            
         }
     }
 
