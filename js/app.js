@@ -156,12 +156,21 @@ $(document).ready(function() {
     		    email: $form[0].elements.EMAIL.value,
     		    lang: $form[0].elements.LANG.value,
     		});
+            console.log('Formulaire envoyé vers Firebase');
             modalEmailContract.foundation('close');
             modalEmailConfirmation.foundation('open');
             signed = true;
             console.log('modale = ouverte');
-            window.location.href="http://agraff.com/leanloan/appbeta/";            
+            gotobeta();
+
+            //window.location.href="http://agraff.com/leanloan/appbeta/";            
         }
+    }
+
+    var timeoutID;
+
+    function gotobeta() {
+        timeoutID = window.setTimeout(function(){location.href="http://agraff.com/leanloan/appbeta/"} , 2000);   
     }
 
 });
